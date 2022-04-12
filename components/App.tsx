@@ -4,11 +4,11 @@ import { getVideoInfo } from "../services/InfoServices";
 function App() {
   const [textInput, setTextInput] = useState("");
 
-  const handleChange = (event) => {
-    setTextInput(event.currentTarget.value);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTextInput(e.currentTarget.value);
   };
 
-  function getAllInfo(e) {
+  function getAllInfo(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
 
     getVideoInfo(textInput).then((info) => {
