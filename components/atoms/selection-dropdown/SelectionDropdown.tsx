@@ -16,11 +16,8 @@ const SelectionDropDown: React.FC<SelectionDropDownProps> = ({
   };
   return (
     <div onClick={handleClick}>
-      <div className="m-10 px-0 w-full">
-        <a
-          className="w-full bg-secondary-sand flex items-center px-2 py-2 rounded"
-          id="menu-btn"
-        >
+      <div className="px-0 w-full h-full">
+        <a className="relative w-full bg-secondary-sand flex items-center justify-between px-2   py-2 ">
           <img
             src="/icons/play-btn-fill.svg"
             className="inline-block  mr-2 "
@@ -34,7 +31,7 @@ const SelectionDropDown: React.FC<SelectionDropDownProps> = ({
           />
         </a>
         {trigger ? (
-          <div className="w-full bg-secondary-sand  text-center flex flex-col rounded mt-4 p-2 text-sm ">
+          <div className="absolute z-10 w-28 bg-secondary-sand  text-center flex flex-col rounded mt-2 p-2 text-sm ">
             <a href="#" className="px-1 py-1 hover:bg-blue-300 rounded">
               Video
             </a>
