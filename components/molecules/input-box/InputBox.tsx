@@ -5,8 +5,8 @@ import InputBoxProps from "./InputBox.d";
 
 const InputBox: React.FC<InputBoxProps> = ({ includeSearchBox }) => {
   return (
-    <div className="border-4 border-slate-300 w-3/4   flex items-stretch  ">
-      <div className="w-28 h-full">
+    <div className="border-8 border-slate-300 w-3/4 h-full flex   ">
+      <div className="w-28 ">
         <SelectionDropDown
           active={false}
           selection="video"
