@@ -17,7 +17,7 @@ const SelectionDropDown: React.FC<SelectionDropDownProps> = ({
   return (
     <div className="h-full " onClick={handleClick}>
       <div className="px-0 w-full h-full">
-        <a className="relative w-full  bg-secondary-sand flex items-center justify-between px-2   py-2 ">
+        <a className="relative w-full h-full  bg-secondary-sand flex items-center justify-between px-2   py-2 ">
           <img
             src="/icons/play-btn-fill.svg"
             className="inline-block  mr-2 "
