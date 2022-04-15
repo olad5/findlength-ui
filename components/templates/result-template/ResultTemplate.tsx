@@ -36,7 +36,7 @@ export default function ResultTemplate() {
       </div>
       <div className=" flex flex-col justify-center items-center">
         <div className="mt-24 w-full h-16   flex justify-center">
-          <InputBox includeSearchBox={true} />
+          <InputBox includeSearchBox={true} onInputBoxChanged={() => {}} />
         </div>
         <div className="mt-16 w-2/4 h-[30vh] flex items-center">
           <ResultSummary

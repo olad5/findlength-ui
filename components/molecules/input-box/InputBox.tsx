@@ -3,7 +3,10 @@ import InputField from "../../atoms/input-field/InputField";
 import SelectionDropDown from "../../atoms/selection-dropdown/SelectionDropdown";
 import InputBoxProps from "./InputBox.d";
 
-const InputBox: React.FC<InputBoxProps> = ({ includeSearchBox }) => {
+const InputBox: React.FC<InputBoxProps> = ({
+  includeSearchBox,
+  onInputBoxChanged,
+}) => {
   return (
     <div className="border-8 border-slate-300 w-3/4 h-full flex   ">
       <div className="w-28 ">
@@ -14,7 +17,7 @@ const InputBox: React.FC<InputBoxProps> = ({ includeSearchBox }) => {
         />
       </div>
       <div className="min-h-max grow ">
-        <InputField />
+        <InputField onInputBoxChanged={onInputBoxChanged} />
       </div>
       <div
         className={`  ${

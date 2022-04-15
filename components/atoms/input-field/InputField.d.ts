@@ -1,1 +1,3 @@
-export default interface InputFieldProps {}
+export default interface InputFieldProps {
+  onInputBoxChanged: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
