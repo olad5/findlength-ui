@@ -22,7 +22,7 @@ const InputBox: React.FC<InputBoxProps> = ({ includeSearchBox }) => {
         } min-h-max`}
       >
         <AppButton onClick={() => {}}>
-          <img src="/icons/search_icon.svg" className="mx-auto" alt="" />
+          <img src="/icons/search_icon.svg" className="mx-auto px-4" alt="" />
         </AppButton>
       </div>
     </div>

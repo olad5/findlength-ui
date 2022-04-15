@@ -6,7 +6,7 @@ const ResultSummary: React.FC<ResultSummaryProps> = ({
   speeds,
 }) => {
   return (
-    <div className="flex flex-col  mt-3 h-full">
+    <div className="flex flex-col  items-center mt-3 w-full h-full">
       <div className="flex  items-center gap-4">
         <img src="/icons/timer_black_fill.svg" alt="timer icon" />
         <p className="">
