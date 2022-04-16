@@ -8,7 +8,7 @@ export default function Home() {
 
   function handleBtnClicked() {
     if (inputBoxText) {
-      router.push("/result");
+      router.push({ pathname: "/result", query: { url: inputBoxText } });
     }
   }
 

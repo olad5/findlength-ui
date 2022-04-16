@@ -1,8 +1,10 @@
-export default interface ResultSummaryProps {
+export type APIResponse = {
+  status: boolean;
+  message: string;
   originalLength: string;
-  speeds: {
+  videoSpeeds: {
     id: number;
     speed: number;
     length: string;
   }[];
-}
+};

@@ -1,7 +1,7 @@
 export default interface SpeedResultProps {
   data: {
     id: number;
-    speed: string;
+    speed: number;
     length: string;
   };
 }

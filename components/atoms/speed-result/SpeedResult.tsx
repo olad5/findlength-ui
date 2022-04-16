@@ -5,7 +5,7 @@ const SpeedResult: React.FC<SpeedResultProps> = ({ data }) => {
     <div className="flex items-center gap-2 ">
       <img src="/icons/timer_black_fill.svg" alt=" timer icon" />
       <p className="flex-1">
-        At {data.speed}x:
+        At {data.speed.toFixed(2)}x:
         <span className="ml-3 text-lg text-primary-veryDarkBlue">
           {data.length}.
         </span>

@@ -1,34 +1,10 @@
+import { ResultTemplateProps } from "./ResultTemplate.d";
 import InputBox from "../../molecules/input-box/InputBox";
 import ResultSummary from "../../molecules/result-summary/ResultSummary";
 import Footer from "../../organisms/footer/Footer";
 import NavBar from "../../organisms/nav-bar/NavBar";
 
-export default function ResultTemplate() {
-  let data = {
-    originaLength: "2minutes, 20seconds",
-    speeds: [
-      {
-        id: 0,
-        speed: "1.25",
-        length: "1minutes, 20seconds",
-      },
-      {
-        id: 1,
-        speed: "1.50",
-        length: "1minutes, 7seconds",
-      },
-      {
-        id: 2,
-        speed: "1.75",
-        length: "57seconds",
-      },
-      {
-        id: 3,
-        speed: "2.00",
-        length: "50seconds",
-      },
-    ],
-  };
+export default function ResultTemplate({ data }: ResultTemplateProps) {
   return (
     <div className="">
       <div className="mt-8">
@@ -40,8 +16,8 @@ export default function ResultTemplate() {
         </div>
         <div className="mt-16 w-2/4 h-[30vh] flex items-center">
           <ResultSummary
-            originaLength={data.originaLength}
-            speeds={data.speeds}
+            originalLength={data?.originalLength}
+            speeds={data?.videoSpeeds}
           />
         </div>
         <div className="w-3/4 mx-auto flex justify-center  mt-24 border-t-[1px] border-slate-200 py-6">

@@ -2,7 +2,7 @@ import SpeedResult from "../../atoms/speed-result/SpeedResult";
 import ResultSummaryProps from "./ResultSummary.d";
 
 const ResultSummary: React.FC<ResultSummaryProps> = ({
-  originaLength,
+  originalLength,
   speeds,
 }) => {
   return (
@@ -12,12 +12,12 @@ const ResultSummary: React.FC<ResultSummaryProps> = ({
         <p className="">
           Total length of the playlist:
           <span className="ml-3 text-lg text-primary-veryDarkBlue">
-            {originaLength}.
+            {originalLength}.
           </span>
         </p>
       </div>
       <div className="flex-1 flex flex-col  ">
-        {speeds.map((speed, index) => (
+        {speeds?.map((speed, index) => (
           <div key={index} className="w-[22rem]  flex flex-col gap-2  m-auto">
             <SpeedResult data={speed} />
           </div>
