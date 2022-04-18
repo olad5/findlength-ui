@@ -1,5 +1,5 @@
 import { APIResponse } from "../../../types/types.d";
 
 export type ResultTemplateProps = {
-  data: Pick<APIResponse, "originalLength" | "videoSpeeds">;
+  data: Pick<APIResponse, "originalLength" | "speeds">;
 };

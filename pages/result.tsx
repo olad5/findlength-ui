@@ -9,18 +9,24 @@ export default function Result({
 }
 
 export const getServerSideProps = async (context) => {
-  let yt_link: string = context.query.url;
-  const response = await fetch(`http://localhost:5200/getVideoInfo`, {
+  let ytLink: string = context.query.url;
+  let resource = context.query.resource;
+
+  let apiLink =
+    "video" === resource
+      ? "http://localhost:5200/getVideoInfo"
+      : "http://localhost:5200/getPlaylistInfo";
+  const response = await fetch(apiLink, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      url: yt_link,
+      url: ytLink,
     }),
   });
 
   const data: APIResponse = await response.json();
 
   return {
-    props: { data: data },
+    props: { data: data, resource: resource },
   };
 };

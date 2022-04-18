@@ -1,7 +1,4 @@
-type state = {
-  url: string;
-  resource: "video" | "playlist";
-};
+import { State } from "../types/types.d";
 
 enum ActionType {
   URL_CHANGED = "url_changed",
@@ -17,7 +14,7 @@ export const initialState = {
   resource: "video",
 };
 
-export const AppReducer = (state: state, action: Action) => {
+export const AppReducer = (state: State, action: Action) => {
   switch (action.type) {
     case ActionType.URL_CHANGED: {
       return {

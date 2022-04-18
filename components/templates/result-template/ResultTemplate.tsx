@@ -17,7 +17,7 @@ export default function ResultTemplate({ data }: ResultTemplateProps) {
         <div className="mt-16 w-3/4 h-[30vh] flex items-center">
           <ResultSummary
             originalLength={data?.originalLength}
-            speeds={data?.videoSpeeds}
+            speeds={data?.speeds}
           />
         </div>
         <div className="w-3/4 mx-auto flex justify-center  mt-24 border-t-[1px] border-slate-200 py-6">
