@@ -9,11 +9,12 @@ export default function Result({
 }
 
 export const getServerSideProps = async (context) => {
+  let yt_link: string = context.query.url;
   const response = await fetch(`http://localhost:5200/getVideoInfo`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      url: context.query.url as string,
+      url: yt_link,
     }),
   });
 

@@ -1,6 +1,8 @@
 import InputFieldProps from "./InputField.d";
+import { useAppContext } from "../../../context/AppContext";
 
 export default function InputField({ onInputBoxChanged }: InputFieldProps) {
+  const [state, dispatch] = useAppContext();
   return (
     <div className="w-full  h-full">
       <input
@@ -8,6 +10,7 @@ export default function InputField({ onInputBoxChanged }: InputFieldProps) {
         type=" text"
         placeholder="Paste Youtube Link here"
         onChange={onInputBoxChanged}
+        defaultValue={state.url}
       />
     </div>
   );
