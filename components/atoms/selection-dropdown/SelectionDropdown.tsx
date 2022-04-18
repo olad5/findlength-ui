@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SelectionDropDownProps from "./SelectionDropdown.d";
+import { SelectionDropDownProps } from "./SelectionDropdown.d";
 
 const SelectionDropDown: React.FC<SelectionDropDownProps> = ({
   selection,

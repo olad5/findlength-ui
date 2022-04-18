@@ -1,6 +1,6 @@
-export default interface InstructionCardProps {
+export type InstructionCardProps = {
   instruction: {
     id: number;
     text: string;
   };
-}
+};

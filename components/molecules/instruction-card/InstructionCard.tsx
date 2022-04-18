@@ -1,4 +1,4 @@
-import InstructionCardProps from "./InstructionCard.d";
+import { InstructionCardProps } from "./InstructionCard.d";
 
 const InstructionCard: React.FC<InstructionCardProps> = ({ instruction }) => {
   return (

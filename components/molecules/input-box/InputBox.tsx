@@ -1,7 +1,7 @@
 import AppButton from "../../atoms/app-button/AppButton";
 import InputField from "../../atoms/input-field/InputField";
 import SelectionDropDown from "../../atoms/selection-dropdown/SelectionDropdown";
-import InputBoxProps from "./InputBox.d";
+import { InputBoxProps } from "./InputBox.d";
 
 const InputBox: React.FC<InputBoxProps> = ({
   includeSearchBox,

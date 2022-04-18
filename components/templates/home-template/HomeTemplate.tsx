@@ -3,7 +3,7 @@ import Footer from "../../organisms/footer/Footer";
 import Header from "../../organisms/header/Header";
 import Instruction from "../../organisms/instructions/Instructions";
 import NavBar from "../../organisms/nav-bar/NavBar";
-import HomeTemplateProps from "./HomeTemplate.d";
+import { HomeTemplateProps } from "./HomeTemplate.d";
 
 export default function HomeTemplate({
   onGetBtnClicked,

@@ -1,5 +1,5 @@
 import SpeedResult from "../../atoms/speed-result/SpeedResult";
-import ResultSummaryProps from "./ResultSummary.d";
+import { ResultSummaryProps } from "./ResultSummary.d";
 
 const ResultSummary: React.FC<ResultSummaryProps> = ({
   originalLength,

@@ -1,6 +1,6 @@
 import AppButton from "../../atoms/app-button/AppButton";
 import InputBox from "../../molecules/input-box/InputBox";
-import CallToActionProps from "./CallToAction.d";
+import { CallToActionProps } from "./CallToAction.d";
 
 export default function CallToAction({
   onGetBtnClicked,

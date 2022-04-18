@@ -1,4 +1,4 @@
-import SpeedResultProps from "./SpeedResult.d";
+import { SpeedResultProps } from "./SpeedResult.d";
 
 const SpeedResult: React.FC<SpeedResultProps> = ({ data }) => {
   return (

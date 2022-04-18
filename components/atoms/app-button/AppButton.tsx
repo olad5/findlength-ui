@@ -1,4 +1,4 @@
-import AppButtonProps from "./AppButton.d";
+import { AppButtonProps } from "./AppButton.d";
 
 export default function AppButton({
   children,
