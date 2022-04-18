@@ -9,13 +9,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindui/react": "^0.1.1",
     "dotenv-load": "^2.0.0",
     "next": "^12.1.4",
     "next-env": "^1.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "tailwindcss": "^3.0.23",
-    "react-icons": "^4.3.1"
+    "tailwindcss": "^3.0.23"
   },
   "devDependencies": {
     "@types/react": "^18.0.1",

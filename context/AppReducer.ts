@@ -1,15 +1,20 @@
 type state = {
   url: string;
+  resource: "video" | "playlist";
 };
 
 enum ActionType {
   URL_CHANGED = "url_changed",
+  RESOURCE_CHANGED = "resource_changed",
 }
 
-type Action = { type: ActionType.URL_CHANGED; value: string };
+type Action =
+  | { type: ActionType.URL_CHANGED; value: string }
+  | { type: ActionType.RESOURCE_CHANGED; value: "video" | "playlist" };
 
 export const initialState = {
   url: "",
+  resource: "video",
 };
 
 export const AppReducer = (state: state, action: Action) => {
@@ -18,6 +23,12 @@ export const AppReducer = (state: state, action: Action) => {
       return {
         ...state,
         url: action.value,
+      };
+    }
+    case ActionType.RESOURCE_CHANGED: {
+      return {
+        ...state,
+        resource: action.value,
       };
     }
 
