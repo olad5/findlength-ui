@@ -1,4 +1,4 @@
-const Header: React.FC = () => {
+export default function Header() {
   return (
     <div className="m-auto w-2/4 ">
       <p className="m-auto text-center text-6xl text-primary-veryDarkBlue">
@@ -9,6 +9,4 @@ const Header: React.FC = () => {
       </p>
     </div>
   );
-};
-
-export default Header;
+}

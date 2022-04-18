@@ -1,10 +1,10 @@
 import SpeedResult from "../../atoms/speed-result/SpeedResult";
 import { ResultSummaryProps } from "./ResultSummary.d";
 
-const ResultSummary: React.FC<ResultSummaryProps> = ({
+export default function ResultSummary({
   originalLength,
   speeds,
-}) => {
+}: ResultSummaryProps) {
   return (
     <div className="flex flex-col  items-center mt-3 w-full h-full">
       <div className="flex  items-center gap-4">
@@ -25,6 +25,4 @@ const ResultSummary: React.FC<ResultSummaryProps> = ({
       </div>
     </div>
   );
-};
-
-export default ResultSummary;
+}

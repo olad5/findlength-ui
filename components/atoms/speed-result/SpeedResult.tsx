@@ -1,6 +1,6 @@
 import { SpeedResultProps } from "./SpeedResult.d";
 
-const SpeedResult: React.FC<SpeedResultProps> = ({ data }) => {
+export default function SpeedResult({ data }: SpeedResultProps) {
   return (
     <div className="flex items-center gap-2 ">
       <img src="/icons/timer_black_fill.svg" alt=" timer icon" />
@@ -12,6 +12,4 @@ const SpeedResult: React.FC<SpeedResultProps> = ({ data }) => {
       </p>
     </div>
   );
-};
-
-export default SpeedResult;
+}

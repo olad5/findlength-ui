@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { SelectionDropDownProps } from "./SelectionDropdown.d";
 
-const SelectionDropDown: React.FC<SelectionDropDownProps> = ({
+export default function SelectionDropDown({
   selection,
   onClick,
   active = true,
-}) => {
+}: SelectionDropDownProps) {
   const [trigger, setTriggered] = useState(false);
 
   const handleClick = (event) => {
@@ -43,6 +43,4 @@ const SelectionDropDown: React.FC<SelectionDropDownProps> = ({
       </div>
     </div>
   );
-};
-
-export default SelectionDropDown;
+}

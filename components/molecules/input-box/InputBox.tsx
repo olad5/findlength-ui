@@ -3,10 +3,10 @@ import InputField from "../../atoms/input-field/InputField";
 import SelectionDropDown from "../../atoms/selection-dropdown/SelectionDropdown";
 import { InputBoxProps } from "./InputBox.d";
 
-const InputBox: React.FC<InputBoxProps> = ({
+export default function InputBox({
   includeSearchBox,
   onInputBoxChanged,
-}) => {
+}: InputBoxProps) {
   return (
     <div className="border-8 border-slate-300 w-3/4 h-full flex   ">
       <div className="w-28 ">
@@ -30,6 +30,4 @@ const InputBox: React.FC<InputBoxProps> = ({
       </div>
     </div>
   );
-};
-
-export default InputBox;
+}

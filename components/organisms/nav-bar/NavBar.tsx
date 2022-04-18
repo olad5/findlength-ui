@@ -1,4 +1,4 @@
-const NavBar: React.FC = () => {
+export default function NavBar() {
   return (
     <div className="flex justify-between w-3/4 m-auto items-center">
       <a href="#" className="flex cursor-pointer items-center ">
@@ -16,5 +16,4 @@ const NavBar: React.FC = () => {
       </div>
     </div>
   );
-};
-export default NavBar;
+}
