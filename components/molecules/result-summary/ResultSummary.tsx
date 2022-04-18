@@ -18,7 +18,7 @@ export default function ResultSummary({
       </div>
       <div className="flex-1 flex flex-col  ">
         {speeds?.map((speed, index) => (
-          <div key={index} className="w-[22rem]  flex flex-col gap-2  m-auto">
+          <div key={index} className="min-w-max  flex flex-col   gap-2  my-2">
             <SpeedResult data={speed} />
           </div>
         ))}

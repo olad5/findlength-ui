@@ -14,7 +14,7 @@ export default function ResultTemplate({ data }: ResultTemplateProps) {
         <div className="mt-24 w-full h-16   flex justify-center">
           <InputBox includeSearchBox={true} onInputBoxChanged={() => {}} />
         </div>
-        <div className="mt-16 w-2/4 h-[30vh] flex items-center">
+        <div className="mt-16 w-3/4 h-[30vh] flex items-center">
           <ResultSummary
             originalLength={data?.originalLength}
             speeds={data?.videoSpeeds}
