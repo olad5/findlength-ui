@@ -11,7 +11,10 @@ export default function Home() {
   function handleBtnClicked() {
     if (inputBoxText) {
       dispatch({ type: "url_changed", value: inputBoxText });
-      router.push({ pathname: "/result", query: { url: inputBoxText } });
+      router.push({
+        pathname: "/result",
+        query: { url: inputBoxText, resource: state.resource },
+      });
     }
   }
 

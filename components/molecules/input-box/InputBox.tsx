@@ -8,7 +8,7 @@ export default function InputBox({
   onInputBoxChanged,
 }: InputBoxProps) {
   return (
-    <div className="border-8 border-slate-300 w-3/4 h-full flex   ">
+    <div className="border-8 border-slate-300 w-full h-full flex   ">
       <div className="w-32 ">
         <SelectionDropDown />
       </div>

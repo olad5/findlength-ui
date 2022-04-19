@@ -27,6 +27,6 @@ export const getServerSideProps = async (context) => {
   const data: APIResponse = await response.json();
 
   return {
-    props: { data: data, resource: resource },
+    props: { data: data },
   };
 };

@@ -10,23 +10,19 @@ export default function HomeTemplate({
   onInputBoxChanged,
 }: HomeTemplateProps) {
   return (
-    <div>
-      <div className="mt-8">
-        <NavBar />
-      </div>
-      <div className="mt-8">
+    <div className="grid-container">
+      <NavBar />
+      <div className="testing stuff out flex flex-col justify-between">
         <Header />
-      </div>
-      <div className="mt-8">
         <CallToAction
           onGetBtnClicked={onGetBtnClicked}
           onInputBoxChanged={onInputBoxChanged}
         />
+        <div className=" w-3/4 mx-auto  mt-4">
+          <Instruction />
+        </div>
       </div>
-      <div className=" w-2/4 mx-auto  mt-16">
-        <Instruction />
-      </div>
-      <div className="w-3/4 mx-auto mt-4 border-t-[1px] border-slate-200 py-6">
+      <div className="footer">
         <Footer />
       </div>
     </div>

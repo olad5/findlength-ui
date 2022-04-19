@@ -2,5 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  height:100vh;
+}
 
+.grid-container {
+  margin:0 auto;
+  max-width:80vw;
+  min-height:100vh;
+  display:grid;
+  grid-template-rows: 10vh 70vh 10vh;
+  align-content:space-around;
+  row-gap:none;
+  grid-auto-rows:1rem;
 
+}
+
+@layer components {
+  .footer {
+      @apply  w-full mx-auto  border-t-[1px] border-slate-200 py-6;
+  }
+
+}

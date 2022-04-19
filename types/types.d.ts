@@ -1,4 +1,3 @@
-// TODO: remove the console logs
 export type APIResponse = {
   status: boolean;
   message: string;
