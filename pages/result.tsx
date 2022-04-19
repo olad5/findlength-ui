@@ -26,6 +26,15 @@ export const getServerSideProps = async (context) => {
 
   const data: APIResponse = await response.json();
 
+  if (!data.status) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: "/error",
+      },
+    };
+  }
+
   return {
     props: { data: data },
   };
