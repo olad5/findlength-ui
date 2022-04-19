@@ -1,14 +1,24 @@
-import Link from "next/link";
+import { useRouter } from "next/router";
+import { useAppContext } from "../../../context/AppContext";
 
 export default function NavBar() {
+  const router = useRouter();
+  const [state, dispatch] = useAppContext();
+
+  function handleClick() {
+    dispatch({ type: "url_changed", value: "" });
+    router.push("/");
+  }
+
   return (
     <div className="flex justify-between w-full m-auto items-center">
-      <Link href="/">
-        <a className="flex cursor-pointer items-center ">
-          <img src="/icons/play-btn-fill.svg" alt="" className="w-6" />
-          <p className="text-secondary-sand ml-2 text-2xl">Findlength</p>
-        </a>
-      </Link>
+      <button
+        className="flex cursor-pointer items-center "
+        onClick={handleClick}
+      >
+        <img src="/icons/play-btn-fill.svg" alt="" className="w-6" />
+        <p className="text-secondary-sand ml-2 text-2xl">Findlength</p>
+      </button>
       <div>
         <a href="#">
           <img
