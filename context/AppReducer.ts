@@ -11,7 +11,7 @@ type Action =
 
 export const initialState = {
   url: "",
-  resource: "video",
+  resource: "video" as "video" | "playlist",
 };
 
 export const AppReducer = (state: State, action: Action) => {

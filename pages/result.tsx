@@ -1,11 +1,26 @@
 import ResultTemplate from "../components/templates/result-template/ResultTemplate";
 import { InferGetServerSidePropsType } from "next";
 import { APIResponse } from "../types/types.d";
+import { useAppContext } from "../context/AppContext";
+import { useRouter } from "next/router";
+import { handleBtnClicked, handleTextChange } from "../utils/functions";
 
 export default function Result({
   data,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  return <ResultTemplate data={data} />;
+  const [state, dispatch] = useAppContext();
+  const router = useRouter();
+  return (
+    <ResultTemplate
+      data={data}
+      onSearchBtnClicked={() =>
+        handleBtnClicked(state.url, dispatch, state, router)
+      }
+      onInputBoxChanged={(e) =>
+        handleTextChange(e.currentTarget.value, dispatch)
+      }
+    />
+  );
 }
 
 export const getServerSideProps = async (context) => {

@@ -6,6 +6,7 @@ import { InputBoxProps } from "./InputBox.d";
 export default function InputBox({
   includeSearchBox,
   onInputBoxChanged,
+  onSearchBtnClicked,
 }: InputBoxProps) {
   return (
     <div className="border-8 border-slate-300 w-full h-full flex   ">
@@ -20,7 +21,7 @@ export default function InputBox({
           includeSearchBox ? "inline-block" : "hidden"
         } min-h-max`}
       >
-        <AppButton onClick={() => {}}>
+        <AppButton onClick={onSearchBtnClicked}>
           <img src="/icons/search_icon.svg" className="mx-auto px-4" alt="" />
         </AppButton>
       </div>
