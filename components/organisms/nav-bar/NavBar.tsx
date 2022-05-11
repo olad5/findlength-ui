@@ -16,8 +16,7 @@ export default function NavBar() {
         className="flex cursor-pointer items-center "
         onClick={handleClick}
       >
-        <img src="/icons/play-btn-fill.svg" alt="" className="w-6" />
-        <p className="text-secondary-sand ml-2 text-2xl">Findlength</p>
+        <img src="/icons/Logo.svg" alt="" className="w-30" />
       </button>
       <div>
         <a href="#">
