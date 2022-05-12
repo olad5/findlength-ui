@@ -1,20 +1,25 @@
 import { NextRouter } from "next/router";
-import { State } from "../types/types";
+import { Dispatch } from "react";
+import { Action } from "../context/AppReducer";
+import { ActionType, State } from "../types/types.d";
 
 export function handleBtnClicked(
   inputBoxText: string,
-  dispatch,
+  dispatch: Dispatch<Action>,
   state: State,
   router: NextRouter
 ) {
   if (inputBoxText) {
-    dispatch({ type: "url_changed", value: inputBoxText });
+    dispatch({ type: ActionType.URL_CHANGED, value: inputBoxText });
     router.push({
       pathname: "/result",
       query: { url: inputBoxText, resource: state.resource },
     });
+  } else {
+    dispatch({ type: ActionType.EMPTY_URL, value: true });
   }
 }
-export function handleTextChange(value: string, dispatch) {
-  dispatch({ type: "url_changed", value: value });
+export function handleTextChange(value: string, dispatch: Dispatch<Action>) {
+  dispatch({ type: ActionType.URL_CHANGED, value: value });
+  dispatch({ type: ActionType.EMPTY_URL, value: false });
 }

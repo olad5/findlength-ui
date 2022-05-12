@@ -3,12 +3,14 @@ import InputBox from "../../molecules/input-box/InputBox";
 import ResultSummary from "../../molecules/result-summary/ResultSummary";
 import Footer from "../../organisms/footer/Footer";
 import NavBar from "../../organisms/nav-bar/NavBar";
+import { useAppContext } from "../../../context/AppContext";
 
 export default function ResultTemplate({
   data,
   onSearchBtnClicked,
   onInputBoxChanged,
 }: ResultTemplateProps) {
+  const [state, dispatch] = useAppContext();
   return (
     <div className=" grid-container">
       <NavBar />
@@ -20,6 +22,9 @@ export default function ResultTemplate({
             onSearchBtnClicked={onSearchBtnClicked}
           />
         </div>
+        {state.isUrlEmpty ? (
+          <div className="text-red-700">Url Field cannot be empty</div>
+        ) : null}
         <div className="mt-16 w-3/4 h-[30vh] flex items-center">
           <ResultSummary
             originalLength={data?.originalLength}

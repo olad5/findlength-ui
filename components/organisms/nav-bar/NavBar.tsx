@@ -1,12 +1,13 @@
 import { useRouter } from "next/router";
 import { useAppContext } from "../../../context/AppContext";
+import { ActionType } from "../../../types/types.d";
 
 export default function NavBar() {
   const router = useRouter();
   const [state, dispatch] = useAppContext();
 
   function handleClick() {
-    dispatch({ type: "url_changed", value: "" });
+    dispatch({ type: ActionType.URL_CHANGED, value: "" });
     router.push("/");
   }
 

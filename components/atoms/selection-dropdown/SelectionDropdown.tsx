@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Transition } from "@tailwindui/react";
 import { useAppContext } from "../../../context/AppContext";
+import { ActionType, ResourceType } from "../../../types/types.d";
 
 export default function SelectionDropDown() {
   const [show, setShow] = useState(false);
@@ -11,9 +12,9 @@ export default function SelectionDropDown() {
   const container = useRef(null);
 
   function handleResourceSelection(e: React.MouseEvent<HTMLAnchorElement>) {
-    let clicked = e.currentTarget.text.toLowerCase() as "video" | "playlist";
+    let clicked = e.currentTarget.text.toLowerCase() as ResourceType;
     setCurrentResource(clicked);
-    dispatch({ type: "resource_changed", value: clicked });
+    dispatch({ type: ActionType.RESOURCE_CHANGED, value: clicked });
     setShow(false);
   }
 

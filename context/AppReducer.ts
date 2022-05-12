@@ -1,17 +1,18 @@
-import { State, ResourceType } from "../types/types.d";
+import { State, ResourceType, ActionType } from "../types/types.d";
 
-enum ActionType {
-  URL_CHANGED = "url_changed",
-  RESOURCE_CHANGED = "resource_changed",
-}
-
-type Action =
+export type Action =
   | { type: ActionType.URL_CHANGED; value: string }
-  | { type: ActionType.RESOURCE_CHANGED; value: ResourceType };
+  | { type: ActionType.RESOURCE_CHANGED; value: ResourceType }
+  | { type: ActionType.EMPTY_URL; value: boolean };
 
-export const initialState: { url: string; resource: ResourceType } = {
+export const initialState: {
+  url: string;
+  resource: ResourceType;
+  isUrlEmpty: boolean;
+} = {
   url: "",
   resource: ResourceType.VIDEO,
+  isUrlEmpty: false,
 };
 
 export const AppReducer = (state: State, action: Action) => {
@@ -26,6 +27,13 @@ export const AppReducer = (state: State, action: Action) => {
       return {
         ...state,
         resource: action.value,
+      };
+    }
+
+    case ActionType.EMPTY_URL: {
+      return {
+        ...state,
+        isUrlEmpty: action.value,
       };
     }
 
