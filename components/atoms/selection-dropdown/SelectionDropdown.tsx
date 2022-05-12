@@ -58,7 +58,7 @@ export default function SelectionDropDown() {
           {!show ? (
             <img
               src="/icons/expand_more_fill.svg"
-              className="inline-block ml-2"
+              className="inline-block "
               alt=""
             />
           ) : (
@@ -82,13 +82,13 @@ export default function SelectionDropDown() {
       >
         <div className="origin-top-right absolute right-0 w-32 py-2 mt-3 bg-secondary-sand rounded shadow-2xl  ">
           <a
-            className="block px-4 py-2 hover:bg-primary-veryDarkBlue hover:text-green-100"
+            className="block px-8 py-2 hover:bg-primary-veryDarkBlue hover:text-green-100"
             onClick={handleResourceSelection}
           >
             Video
           </a>
           <a
-            className="block px-4 py-2 hover:bg-primary-veryDarkBlue hover:text-green-100"
+            className="block px-8 py-2 hover:bg-primary-veryDarkBlue hover:text-green-100"
             onClick={handleResourceSelection}
           >
             Playlist
