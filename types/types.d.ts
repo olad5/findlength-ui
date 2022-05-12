@@ -9,8 +9,12 @@ export type APIResponse = {
   }[];
 };
 
+export enum ResourceType {
+  VIDEO = "video",
+  PLAYLIST = "playlist",
+}
 export type Resource = {
-  resource: "video" | "playlist";
+  resource: ResourceType;
 };
 
 export type State = {

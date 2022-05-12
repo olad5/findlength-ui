@@ -12,7 +12,7 @@ export default function HomeTemplate({
   return (
     <div className="grid-container">
       <NavBar />
-      <div className="testing stuff out flex flex-col justify-between">
+      <div className="flex flex-col justify-between">
         <Header />
         <CallToAction
           onGetBtnClicked={onGetBtnClicked}
