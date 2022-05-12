@@ -18,11 +18,7 @@ export function ErrorSummary() {
   return (
     <div className="flex flex-col  items-center  w-full ">
       <div className="flex  items-center gap-3 mt-10">
-        <img
-          src="/icons/timer_black_fill.svg"
-          alt="timer icon"
-          className="w-8"
-        />
+        <img src="/icons/timer-error.svg" alt="timer icon" className="w-8" />
         <p className="">Uh-Oh!</p>
       </div>
       <p className="mt-4">kindly check the link you pasted and try again</p>

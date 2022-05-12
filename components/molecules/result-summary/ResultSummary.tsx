@@ -8,7 +8,7 @@ export default function ResultSummary({
   return (
     <div className="flex flex-col  items-center mt-3 w-full h-full">
       <div className="flex  items-center gap-4">
-        <img src="/icons/timer_black_fill.svg" alt="timer icon" />
+        <img src="/icons/timer-primary.svg" alt="timer icon" />
         <p className="">
           Total length of the playlist:
           <span className="ml-3 text-lg text-primary-veryDarkBlue">
