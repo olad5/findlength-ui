@@ -6,9 +6,7 @@ import { ActionType, ResourceType } from "../../../types/types.d";
 export default function SelectionDropDown() {
   const [show, setShow] = useState(false);
   const [state, dispatch] = useAppContext();
-  const [currentResource, setCurrentResource] = useState<"video" | "playlist">(
-    state.resource
-  );
+  const [currentResource, setCurrentResource] = useState(state.resource);
   const container = useRef(null);
 
   function handleResourceSelection(e: React.MouseEvent<HTMLAnchorElement>) {

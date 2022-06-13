@@ -20,7 +20,7 @@ export default function NavBar() {
         <img src="/icons/Logo.svg" alt="" className="w-30" />
       </button>
       <div>
-        <a href="#">
+        <a href="https://github.com/olad5">
           <img
             src="/icons/github-original.svg"
             alt="github icon"

@@ -4,7 +4,7 @@ export default function Footer() {
       <p>
         Made with ❤ by {""}{" "}
         <a
-          href="#"
+          href="https://github.com/olad5"
           className="underline underline-offset-4  decoration-primary-veryDarkBlue"
         >
           Francis
