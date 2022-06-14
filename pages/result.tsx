@@ -27,10 +27,19 @@ export const getServerSideProps = async (context) => {
   let ytLink: string = context.query.url;
   let resource = context.query.resource;
 
-  let apiLink =
+  const apiLink =
     "video" === resource
-      ? "http://localhost:5200/getVideoInfo"
-      : "http://localhost:5200/getPlaylistInfo";
+      ? `${
+          process.env.NODE_ENV === "development"
+            ? "http://localhost:5200"
+            : process.env.API_URL
+        }/getVideoInfo`
+      : `${
+          process.env.NODE_ENV === "development"
+            ? "http://localhost:5200"
+            : process.env.API_URL
+        }/getPlaylistInfo`;
+
   const response = await fetch(apiLink, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
