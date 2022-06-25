@@ -1,6 +1,6 @@
 {
-  "name": "findlength",
-  "author": "Francis Moss <shonubioladipo@gmail.com>",
+  "name": "findlength-ui",
+  "author": "Francis Shonubi <shonubioladipo@gmail.com>",
   "license": "MIT",
   "version": "0.1.0",
   "scripts": {

@@ -11,7 +11,7 @@ export default function Footer() {
         </a>{" "}
         &{" "}
         <a
-          href="#"
+          href="https://bit.ly/designbyjaphet"
           className="underline underline-offset-4  decoration-primary-veryDarkBlue"
         >
           Japhet
