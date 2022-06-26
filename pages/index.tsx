@@ -1,4 +1,4 @@
-import HomeTemplate from "../components/templates/home-template/HomeTemplate";
+import HomeTemplate from "../src/components/templates/home-template/HomeTemplate";
 import { useRouter } from "next/router";
 import { useAppContext } from "../context/AppContext";
 import { handleBtnClicked, handleTextChange } from "../utils/functions";

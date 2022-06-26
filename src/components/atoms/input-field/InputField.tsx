@@ -1,5 +1,5 @@
 import { InputFieldProps } from "./InputField.d";
-import { useAppContext } from "../../../context/AppContext";
+import { useAppContext } from "../../../../context/AppContext";
 
 export default function InputField({ onInputBoxChanged }: InputFieldProps) {
   const [state, dispatch] = useAppContext();

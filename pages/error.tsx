@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import ErrorTemplate from "../components/templates/error-template/ErrorTemplate";
+import ErrorTemplate from "../src/components/templates/error-template/ErrorTemplate";
 import { useAppContext } from "../context/AppContext";
 import { handleBtnClicked, handleTextChange } from "../utils/functions";
 

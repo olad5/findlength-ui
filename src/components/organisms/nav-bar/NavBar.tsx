@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import { useAppContext } from "../../../context/AppContext";
-import { ActionType } from "../../../types/types.d";
+import { useAppContext } from "../../../../context/AppContext";
+import { ActionType } from "../../../../types/types.d";
 
 export default function NavBar() {
   const router = useRouter();

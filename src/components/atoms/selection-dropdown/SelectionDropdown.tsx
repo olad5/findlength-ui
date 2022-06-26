@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Transition } from "@tailwindui/react";
-import { useAppContext } from "../../../context/AppContext";
-import { ActionType, ResourceType } from "../../../types/types.d";
+import { useAppContext } from "../../../../context/AppContext";
+import { ActionType, ResourceType } from "../../../../types/types.d";
 
 export default function SelectionDropDown() {
   const [show, setShow] = useState(false);

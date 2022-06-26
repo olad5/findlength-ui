@@ -1,4 +1,4 @@
-import ResultTemplate from "../components/templates/result-template/ResultTemplate";
+import ResultTemplate from "../src/components/templates/result-template/ResultTemplate";
 import { InferGetServerSidePropsType } from "next";
 import { APIResponse } from "../types/types.d";
 import { useAppContext } from "../context/AppContext";
@@ -31,12 +31,12 @@ export const getServerSideProps = async (context) => {
     "video" === resource
       ? `${
           process.env.NODE_ENV === "development"
-            ? "http://localhost:5200"
+            ? process.env.LOCALHOST
             : process.env.API_URL
         }/getVideoInfo`
       : `${
           process.env.NODE_ENV === "development"
-            ? "http://localhost:5200"
+            ? process.env.LOCALHOST
             : process.env.API_URL
         }/getPlaylistInfo`;
 

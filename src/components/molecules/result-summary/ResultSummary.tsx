@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useAppContext } from "../../../context/AppContext";
+import { useAppContext } from "../../../../context/AppContext";
 import SpeedResult from "../../atoms/speed-result/SpeedResult";
 import { ResultSummaryProps } from "./ResultSummary.d";
 

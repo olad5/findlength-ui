@@ -3,7 +3,7 @@ import InputBox from "../../molecules/input-box/InputBox";
 import ResultSummary from "../../molecules/result-summary/ResultSummary";
 import Footer from "../../organisms/footer/Footer";
 import NavBar from "../../organisms/nav-bar/NavBar";
-import { useAppContext } from "../../../context/AppContext";
+import { useAppContext } from "../../../../context/AppContext";
 
 export default function ResultTemplate({
   data,
