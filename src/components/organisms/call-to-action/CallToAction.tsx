@@ -1,6 +1,7 @@
 import { useAppContext } from "../../../../context/AppContext";
 import AppButton from "../../atoms/app-button/AppButton";
-import InputBox from "../../molecules/input-box/InputBox";
+import InputField from "../../atoms/input-field/InputField";
+import SelectionRadioBtns from "../../atoms/selection-radio-btns/SelectionRadioBtns";
 import { CallToActionProps } from "./CallToAction.d";
 
 export default function CallToAction({
@@ -9,12 +10,12 @@ export default function CallToAction({
 }: CallToActionProps) {
   const [state, dispatch] = useAppContext();
   return (
-    <div className="w-3/4  m-auto flex flex-col  items-center">
-      <div className="w-full h-16   flex justify-center">
-        <InputBox
-          includeSearchBox={false}
-          onInputBoxChanged={onInputBoxChanged}
-        />
+    <div className="w-3/5  m-auto flex flex-col  items-center">
+      <div className="justify-center w-1/3">
+        <SelectionRadioBtns />
+      </div>
+      <div className="w-full h-12 mt-4 flex justify-center">
+        <InputField onInputBoxChanged={onInputBoxChanged} />
       </div>
       {state.isUrlEmpty ? (
         <div className="text-red-700">Url Field cannot be empty</div>
