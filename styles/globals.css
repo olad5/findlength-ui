@@ -4,6 +4,7 @@
 
 body {
   height:100vh;
+  font-family:'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .grid-container {

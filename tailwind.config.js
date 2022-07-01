@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
   purge: ["./pages/**/*.tsx", "./src/**/*.tsx"],
@@ -14,6 +16,11 @@ module.exports = {
         secondary: {
           sand: "#ffa85b",
         },
+      },
+      fontFamily: {
+        Josefin: ["Josefin Sans", ...defaultTheme.fontFamily.sans],
+        DmSans: ["DM Sans", ...defaultTheme.fontFamily.sans],
+        Syne: ["Syne", ...defaultTheme.fontFamily.sans],
       },
     },
   },
