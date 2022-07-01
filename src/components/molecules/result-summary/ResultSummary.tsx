@@ -14,12 +14,12 @@ export default function ResultSummary({
   );
 
   return (
-    <div className="flex flex-col gap-2  items-center mt-3 w-full h-full ">
+    <div className="flex flex-col gap-2  items-center  w-full h-full ">
       <h2 className="text-primary-veryDarkBlue font-Syne font-medium text-lg">
         Results for:{"  "}
         <span className="font-bold">{resourceTitle}</span>
       </h2>
-      <div className="flex flex-col gap-4  items-center mt-3 w-full h-full shadow-[0px_3px_12px_0.1px] shadow-secondary-sand px-4">
+      <div className="flex flex-col gap-4  items-center mt-3 w-full h-full shadow-[0px_3px_12px_0.1px] shadow-secondary-sand p-4">
         <div className="flex items-center gap-4 ">
           <div className="flex gap-4 p-2">
             <img src="/icons/timer-primary.svg" alt="timer icon" />
