@@ -1,5 +1,4 @@
 import { ResultTemplateProps } from "./ResultTemplate.d";
-import InputBox from "../../molecules/input-box/InputBox";
 import ResultSummary from "../../molecules/result-summary/ResultSummary";
 import Footer from "../../organisms/footer/Footer";
 import NavBar from "../../organisms/nav-bar/NavBar";
@@ -25,7 +24,7 @@ export default function ResultTemplate({
             resourceTitle={data?.resourceTitle}
           />
         </div>
-        <div className=" mt-10 w-[13rem]   min-h-min flex justify-center  ">
+        <div className=" mt-10 w-[12rem] min-h-min flex justify-center">
           <SelectionRadioBtns />
         </div>
         <div className=" w-3/4 h-12 my-4  flex gap-3 min-h-min justify-center relative">
