@@ -11,6 +11,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <title>Findlength </title>
+
           <link
             href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap"
             rel="stylesheet"
@@ -19,6 +21,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@400;500&display=swap"
             rel="stylesheet"
           />
+          <link rel="icon" href="/icons/favicon.svg" />
         </Head>
         <body>
           <Main />
