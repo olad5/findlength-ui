@@ -1,8 +1,5 @@
-export type ResultSummaryProps = {
-  originalLength: string;
-  speeds: {
-    id: number;
-    speed: number;
-    length: string;
-  }[];
-};
+import { APIResponse } from "../../../../types/types.d";
+export type ResultSummaryProps = Pick<
+  APIResponse,
+  "originalLength" | "speeds" | "resourceTitle"
+>;

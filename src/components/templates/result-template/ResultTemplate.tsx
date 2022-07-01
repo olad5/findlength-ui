@@ -25,10 +25,11 @@ export default function ResultTemplate({
         {state.isUrlEmpty ? (
           <div className="text-red-700">Url Field cannot be empty</div>
         ) : null}
-        <div className="mt-16 w-3/4 h-[30vh] flex items-center">
+        <div className="mt-16 w-2/4 min-h-min  flex items-center">
           <ResultSummary
             originalLength={data?.originalLength}
             speeds={data?.speeds}
+            resourceTitle={data?.resourceTitle}
           />
         </div>
       </div>

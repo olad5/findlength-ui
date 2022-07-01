@@ -14,7 +14,7 @@ module.exports = {
           veryDarkBlue: "#092c4c",
         },
         secondary: {
-          sand: "#ffa85b",
+          sand: "rgba(255, 168, 91, 1)",
         },
       },
       fontFamily: {

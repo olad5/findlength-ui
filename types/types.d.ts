@@ -1,6 +1,7 @@
 export type APIResponse = {
   status: boolean;
   message: string;
+  resourceTitle: string;
   originalLength: string;
   speeds: {
     id: number;
