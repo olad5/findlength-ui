@@ -17,7 +17,15 @@ export default function Instruction() {
   ];
 
   return (
-    <>
+    <div>
+      <h3 className="text-center text-primary-veryDarkBlue text-lg  font-medium relative flex mx-auto justify-center items-center  w-1/5  mb-4">
+        How it works
+        <img
+          src="/icons/how-it-works.svg"
+          alt="how it works crown"
+          className="w-24 absolute inline"
+        />
+      </h3>
       <div className="flex justify-between items-center content-center ">
         {instructions.map((instruction) => (
           <div key={instruction.id}>
@@ -25,6 +33,6 @@ export default function Instruction() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
