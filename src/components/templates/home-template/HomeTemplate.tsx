@@ -18,7 +18,7 @@ export default function HomeTemplate({
           onGetBtnClicked={onGetBtnClicked}
           onInputBoxChanged={onInputBoxChanged}
         />
-        <div className=" w-3/4 mx-auto  mt-7">
+        <div className=" w-3/5 mx-auto  mt-7">
           <Instruction />
         </div>
       </div>

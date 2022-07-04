@@ -12,7 +12,7 @@ export default function Instruction() {
     },
     {
       id: 2,
-      text: "Get the calculated length at different playback speed.",
+      text: "Click “Get length” to see results at different playback speed.",
     },
   ];
 
