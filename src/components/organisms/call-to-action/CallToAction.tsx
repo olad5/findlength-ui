@@ -10,11 +10,11 @@ export default function CallToAction({
 }: CallToActionProps) {
   const [state, dispatch] = useAppContext();
   return (
-    <div className="w-3/5  m-auto flex flex-col  items-center">
-      <div className="justify-center w-1/3">
+    <div className="w-3/5  m-auto flex flex-col  items-center ">
+      <div className="justify-center w-52">
         <SelectionRadioBtns />
       </div>
-      <div className="w-full h-12 mt-4 flex justify-center">
+      <div className="w-4/5 h-12 mt-4 flex justify-center">
         <InputField onInputBoxChanged={onInputBoxChanged} />
       </div>
       {state.isUrlEmpty ? (
