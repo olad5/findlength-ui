@@ -10,17 +10,21 @@ export default function CallToAction({
 }: CallToActionProps) {
   const [state, dispatch] = useAppContext();
   return (
-    <div className="w-3/5  m-auto flex flex-col  items-center ">
+    <div className="w-3/5  m-auto my-0 flex flex-col  items-center ">
       <div className="justify-center w-52">
         <SelectionRadioBtns />
       </div>
-      <div className="w-4/5 h-12 mt-4 flex justify-center">
-        <InputField onInputBoxChanged={onInputBoxChanged} />
+      <div className="relative w-4/5 h-12 mt-0 mb-4 flex justify-center">
+        <div className="w-full  h-12 mt-4 flex justify-center">
+          <InputField onInputBoxChanged={onInputBoxChanged} />
+        </div>
+        {state.isUrlEmpty && (
+          <div className="text-red-700 mt-6  absolute top-12">
+            Heyy, kindly paste a link in the search bar to continue.
+          </div>
+        )}
       </div>
-      {state.isUrlEmpty ? (
-        <div className="text-red-700">Url Field cannot be empty</div>
-      ) : null}
-      <div className=" w-[14rem] mt-8 ">
+      <div className=" w-[12rem] mt-10 ">
         <AppButton padding="py-3 px-8" onClick={onGetBtnClicked}>
           Get length
         </AppButton>
