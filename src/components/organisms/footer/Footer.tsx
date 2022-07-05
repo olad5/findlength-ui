@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="w-2/5 m-auto text-center text-primary-veryDarkBlue">
+    <div className="lg:w-2/5 m-auto text-center text-primary-veryDarkBlue">
       <p>
         Made with ❤ by {""}{" "}
         <a

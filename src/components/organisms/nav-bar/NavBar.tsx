@@ -17,14 +17,18 @@ export default function NavBar() {
         className="flex cursor-pointer items-center "
         onClick={handleClick}
       >
-        <img src="/icons/Logo.svg" alt="" className="w-30" />
+        <img
+          src="/icons/Logo.svg"
+          alt="App logo"
+          className="w-[7rem] lg:w-40"
+        />
       </button>
       <div>
         <a href="https://github.com/olad5">
           <img
             src="/icons/github-original.svg"
             alt="github icon"
-            className="w-6"
+            className="w-5 lg:w-6"
           />
         </a>
       </div>

@@ -28,7 +28,7 @@ export default function SelectionRadioBtns({}) {
               <div className="w-[.8rem] h-[.8rem] border-4 border-white bg-white rounded-full"></div>
             )}
           </div>
-          <label className="text-lg text-primary-veryDarkBlue font-medium">
+          <label className="text-sm lg:text-lg text-primary-veryDarkBlue font-medium">
             {" "}
             Video
           </label>
@@ -44,7 +44,7 @@ export default function SelectionRadioBtns({}) {
               <div className="w-[.8rem] h-[.8rem] border-4  border-white bg-white rounded-full"></div>
             )}
           </div>
-          <label className="text-lg text-primary-veryDarkBlue font-medium">
+          <label className="text-sm lg:text-lg text-primary-veryDarkBlue font-medium">
             Playlist
           </label>
         </button>

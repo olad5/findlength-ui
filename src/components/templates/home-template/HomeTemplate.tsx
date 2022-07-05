@@ -18,11 +18,11 @@ export default function HomeTemplate({
           onGetBtnClicked={onGetBtnClicked}
           onInputBoxChanged={onInputBoxChanged}
         />
-        <div className=" w-3/5 mx-auto  mt-7">
+        <div className=" w-3/5 mx-auto  mt-12 lg:mt-7">
           <Instruction />
         </div>
       </div>
-      <div className="footer">
+      <div className="mt-7 lg:mt-0 footer">
         <Footer />
       </div>
     </div>

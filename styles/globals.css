@@ -12,12 +12,22 @@ body {
   max-width:80vw;
   min-height:100vh;
   display:grid;
-  grid-template-rows: 10vh 70vh 10vh;
+  grid-template-rows: 10vh auto auto;
   align-content:space-around;
   row-gap:none;
   grid-auto-rows:1rem;
 
 }
+
+@media screen and (max-width: 1024px) {
+
+.grid-container {
+    max-width:89vw;
+
+    }
+    
+  }
+
 
 @layer components {
   .footer {

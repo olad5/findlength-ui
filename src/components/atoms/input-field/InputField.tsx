@@ -6,7 +6,7 @@ export default function InputField({ onInputBoxChanged }: InputFieldProps) {
   return (
     <div className="w-full  h-full">
       <input
-        className="w-full pl-4 pr-2  h-full border-0 focus:border-0 shadow-[0px_6px_12px_2px] shadow-secondary-sand outline-none"
+        className="text-xs lg:text-sm placeholder:text-slate-500  w-full pl-4 pr-2  h-full border-0 focus:border-0 shadow-[0px_6px_12px_2px] shadow-secondary-sand outline-none"
         type=" text"
         placeholder="Paste Youtube Link here"
         onChange={onInputBoxChanged}
