@@ -16,14 +16,14 @@ export default function ErrorTemplate({
     <div className="grid-container">
       <NavBar />
 
-      <div className=" flex flex-col justify-center items-center">
+      <div className="mt-3 lg:mt-0 flex flex-col justify-center items-center">
         <div className=" flex flex-col justify-center items-center">
           <ErrorSummary />
         </div>
         <div className=" mt-10 w-[12rem] min-h-min flex justify-center">
           <SelectionRadioBtns />
         </div>
-        <div className=" w-3/5 h-12 my-4  flex gap-3 min-h-min justify-center relative">
+        <div className=" w-full lg:w-3/5 h-12 my-4  flex gap-3 min-h-min justify-center relative">
           <div className="grow">
             <InputField onInputBoxChanged={onInputBoxChanged} />
           </div>
