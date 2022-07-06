@@ -17,7 +17,7 @@ export default function ResultTemplate({
     <div className=" grid-container">
       <NavBar />
       <div className=" flex flex-col  items-center ">
-        <div className="  min-h-min min-w-min  flex items-center">
+        <div className=" min-h-min min-w-min max-w-max  flex items-center">
           <ResultSummary
             originalLength={data?.originalLength}
             speeds={data?.speeds}
@@ -27,7 +27,7 @@ export default function ResultTemplate({
         <div className=" mt-10 w-[12rem] min-h-min flex justify-center">
           <SelectionRadioBtns />
         </div>
-        <div className=" w-3/5 h-12 my-4  flex gap-3 min-h-min justify-center relative">
+        <div className=" w-full lg:w-3/5 h-12 my-4  flex gap-3 min-h-min justify-center relative ">
           <div className="grow">
             <InputField onInputBoxChanged={onInputBoxChanged} />
           </div>
