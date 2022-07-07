@@ -22,7 +22,7 @@ export default function HomeTemplate({
           <Instruction />
         </div>
       </div>
-      <div className="mt-7 lg:mt-0 footer">
+      <div className="mt-7 xl:mt-0 footer">
         <Footer />
       </div>
     </div>
