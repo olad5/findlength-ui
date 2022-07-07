@@ -20,7 +20,7 @@ export default function NavBar() {
         <img
           src="/icons/Logo.svg"
           alt="App logo"
-          className="w-[7rem] lg:w-40"
+          className="w-[7rem] sm:w-40"
         />
       </button>
       <div>
@@ -28,7 +28,7 @@ export default function NavBar() {
           <img
             src="/icons/github-original.svg"
             alt="github icon"
-            className="w-5 lg:w-6"
+            className="w-5 sm:w-6"
           />
         </a>
       </div>
