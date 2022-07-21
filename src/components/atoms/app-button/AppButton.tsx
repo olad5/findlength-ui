@@ -7,6 +7,7 @@ export default function AppButton({
 }: AppButtonProps) {
   return (
     <button
+      type="submit"
       className={`appButton whitespace-nowrap text-center ${padding} p-2 text-lg    text-white bg-primary-veryDarkBlue w-full h-full flex justify-center items-center  `}
       onClick={onClick}
     >
