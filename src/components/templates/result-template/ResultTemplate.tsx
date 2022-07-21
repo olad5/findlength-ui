@@ -6,6 +6,7 @@ import { useAppContext } from "../../../../context/AppContext";
 import SelectionRadioBtns from "../../atoms/selection-radio-btns/SelectionRadioBtns";
 import InputField from "../../atoms/input-field/InputField";
 import AppButton from "../../atoms/app-button/AppButton";
+import { TailSpin } from "react-loader-spinner";
 
 export default function ResultTemplate({
   data,
@@ -13,6 +14,7 @@ export default function ResultTemplate({
   onInputBoxChanged,
 }: ResultTemplateProps) {
   const [state, dispatch] = useAppContext();
+
   return (
     <div className=" grid-container">
       <NavBar />
@@ -33,11 +35,21 @@ export default function ResultTemplate({
           </div>
           <div>
             <AppButton onClick={onSearchBtnClicked}>
-              <img
-                src="/icons/search_icon.svg"
-                className="mx-auto px-4"
-                alt=""
-              />
+              {state.loading ? (
+                <div className="w-3/5 ">
+                  <TailSpin
+                    ariaLabel="loading-indicator"
+                    color="white"
+                    height={35}
+                  />
+                </div>
+              ) : (
+                <img
+                  src="/icons/search_icon.svg"
+                  className="mx-auto px-4"
+                  alt=""
+                />
+              )}
             </AppButton>
           </div>
           {state.isUrlEmpty && (

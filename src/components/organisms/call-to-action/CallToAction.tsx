@@ -1,3 +1,4 @@
+import { TailSpin } from "react-loader-spinner";
 import { useAppContext } from "../../../../context/AppContext";
 import AppButton from "../../atoms/app-button/AppButton";
 import InputField from "../../atoms/input-field/InputField";
@@ -9,6 +10,7 @@ export default function CallToAction({
   onInputBoxChanged,
 }: CallToActionProps) {
   const [state, dispatch] = useAppContext();
+
   return (
     <div className="w-full xl:w-3/5 m-auto my-0 flex flex-col  items-center ">
       <div className="mt-8 w-40 xl:mt-4 lg:w-52 justify-center ">
@@ -24,9 +26,19 @@ export default function CallToAction({
           </div>
         )}
       </div>
-      <div className="mt-10 w-[12rem] ">
+      <div className="mt-10 w-[12rem]  ">
         <AppButton padding="xl:py-3 px-8" onClick={onGetBtnClicked}>
-          Get length
+          {state.loading ? (
+            <div className="w-3/5 ">
+              <TailSpin
+                ariaLabel="loading-indicator"
+                color="white"
+                height={35}
+              />
+            </div>
+          ) : (
+            <>Get length</>
+          )}
         </AppButton>
       </div>
     </div>

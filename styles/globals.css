@@ -19,6 +19,16 @@ body {
 
 }
 
+.appButton:hover {
+   background: rgba(33, 81, 124, 1);
+  transition: background 600ms ease-out;
+}
+
+.inputField {
+  -webkit-appearance: none;
+}
+
+
 @media screen and (max-width: 1024px) {
 
 .grid-container {

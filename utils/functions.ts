@@ -11,6 +11,7 @@ export function handleBtnClicked(
 ) {
   if (inputBoxText) {
     dispatch({ type: ActionType.URL_CHANGED, value: inputBoxText });
+    dispatch({ type: ActionType.IS_LOADING, value: true });
     router.push({
       pathname: "/result",
       query: { url: inputBoxText, resource: state.resource },

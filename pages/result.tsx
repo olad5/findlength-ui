@@ -1,15 +1,23 @@
 import ResultTemplate from "../src/components/templates/result-template/ResultTemplate";
 import { InferGetServerSidePropsType } from "next";
-import { APIResponse } from "../types/types.d";
+import { ActionType, APIResponse } from "../types/types.d";
 import { useAppContext } from "../context/AppContext";
 import { useRouter } from "next/router";
 import { handleBtnClicked, handleTextChange } from "../utils/functions";
+import { useEffect } from "react";
 
 export default function Result({
   data,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const [state, dispatch] = useAppContext();
   const router = useRouter();
+
+  useEffect(() => {
+    if (state.loading) {
+      dispatch({ type: ActionType.IS_LOADING, value: false });
+    }
+  }, [router.query.timestamp]);
+
   return (
     <ResultTemplate
       data={data}
@@ -54,7 +62,8 @@ export const getServerSideProps = async (context) => {
     return {
       redirect: {
         permanent: false,
-        destination: "/error",
+        destination: "/error?timestamp=" + Date.now(),
+        status: true,
       },
     };
   }

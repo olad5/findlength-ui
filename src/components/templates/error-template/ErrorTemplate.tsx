@@ -1,3 +1,4 @@
+import { TailSpin } from "react-loader-spinner";
 import { useAppContext } from "../../../../context/AppContext";
 import AppButton from "../../atoms/app-button/AppButton";
 import InputField from "../../atoms/input-field/InputField";
@@ -12,6 +13,7 @@ export default function ErrorTemplate({
   onInputBoxChanged,
 }: ErrorTemplateProps) {
   const [state, dispatch] = useAppContext();
+
   return (
     <div className="grid-container">
       <NavBar />
@@ -29,11 +31,21 @@ export default function ErrorTemplate({
           </div>
           <div>
             <AppButton onClick={onSearchBtnClicked}>
-              <img
-                src="/icons/search_icon.svg"
-                className="mx-auto px-4"
-                alt=""
-              />
+              {state.loading ? (
+                <div className="w-3/5 ">
+                  <TailSpin
+                    ariaLabel="loading-indicator"
+                    color="white"
+                    height={35}
+                  />
+                </div>
+              ) : (
+                <img
+                  src="/icons/search_icon.svg"
+                  className="mx-auto px-4"
+                  alt=""
+                />
+              )}
             </AppButton>
           </div>
           {state.isUrlEmpty && (
