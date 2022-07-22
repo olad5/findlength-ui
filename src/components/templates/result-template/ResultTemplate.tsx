@@ -53,7 +53,7 @@ export default function ResultTemplate({
             </AppButton>
           </div>
           {state.isUrlEmpty && (
-            <div className="text-red-700 mt-3  absolute top-12">
+            <div className="text-red-700 mt-3 text-xs lg:text-lg  absolute top-12">
               Heyy, kindly paste a link in the search bar to continue.
             </div>
           )}
