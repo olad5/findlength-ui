@@ -24,7 +24,7 @@ export default function NavBar() {
         />
       </button>
       <div>
-        <a href="https://github.com/olad5">
+        <a href="https://github.com/olad5/findlength-ui">
           <img
             src="/icons/github-original.svg"
             alt="github icon"
